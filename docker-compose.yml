@@ -67,6 +67,7 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
+
   tinymixtral_local_gpu:
     profiles: ["local","gpu"]
     build: .
@@ -94,7 +95,6 @@ services:
     ports:
       - "31331:31331"
     restart: always
-
     
   tinyllamacpu:
     profiles: ["tinyllama","cpu"]
@@ -105,7 +105,6 @@ services:
     ports:
       - "31331:31331"
     restart: always
-
     
   tinyllamagpu:
     profiles: ["core"]
@@ -123,7 +122,6 @@ services:
               count: 1
               capabilities: [gpu]
     restart: always
-
     
   tinyllamatpu:
     profiles: ["tpu"]
